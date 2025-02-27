@@ -17,6 +17,12 @@
     gap:80px;
 }
 
+.footer-logo{
+    font-size: 45px;
+    color: tomato;
+    font-style: italic;
+}
+
 .footer-content-left, .footer-content-center, .footer-content-right{
     display: flex;
     flex-direction: column;

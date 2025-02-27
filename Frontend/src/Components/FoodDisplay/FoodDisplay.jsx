@@ -1,12 +1,15 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import './FoodDisplay.css'
 import { StoreContext } from '../../context/StoreContext'
-import FoodItem from '../FoodItem/FoodItem'
+import FoodItem from '../FoodItem/FoodItem.jsx'
 
 
 const FoodDisplay = ({category}) => {
 
-    const { food_list } = useContext(StoreContext)
+    const { food_list } = useContext(StoreContext);
+    useEffect(() =>{
+        console.log(food_list);
+    })
 
     return (
         <div className='food-display' id='food-display'>

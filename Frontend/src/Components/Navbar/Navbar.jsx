@@ -20,6 +20,7 @@ const Navbar = ({setShowLogin}) => {
   return (
     <div className='navbar'>
       <Link to='/'><img src={assets.logo} alt="" className='logo'/></Link>
+      {/* <Link to='/'><h3 className='logo'>TastyGo</h3></Link> */}
       <ul className="navbar-menu">
         <Link to='/' onClick={() => setmenu("Home")} className={menu === "Home" ? "active":""}>Home</Link>
         <a href='#explore-menu' onClick={() => setmenu("Menu")} className={menu === "Menu" ? "active":""}>Menu</a>
@@ -32,7 +33,7 @@ const Navbar = ({setShowLogin}) => {
         <Link to='/cart'><img src={assets.basket_icon} alt="" /></Link>
             <div className={getTotalCartAmount() === 0?"":"dot"}></div>
         </div>
-        { !token ? <button onClick={()=>setShowLogin(true)}>Sign in</button>    
+        { !token ? <button onClick={()=> setShowLogin(true)}>Sign in</button>    
           : <div className='navbar-profile'>
               <img src={assets.profile_icon} alt="" />
               <ul className="nav-profile-dropdown">

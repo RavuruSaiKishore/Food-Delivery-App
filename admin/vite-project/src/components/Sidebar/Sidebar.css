@@ -1,12 +1,15 @@
-.sidebar{
+.sidebar {
     width: 18%;
     min-height: 100vh;
     border: 1px solid #a9a9a9;
     border-top: 0;
     font-size: max(1vw, 10px);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
 }
 
-.sidebar-options{
+/* Sidebar options */
+.sidebar-options {
     padding-top: 50px;
     padding-left: 20%;
     display: flex;
@@ -14,7 +17,8 @@
     gap: 20px;
 }
 
-.sidebar-option{
+/* Individual sidebar option */
+.sidebar-option {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -22,15 +26,77 @@
     padding: 8px 10px;
     border-radius: 3px 0px 0px 3px;
     cursor: pointer;
+    transition: background 0.3s ease-in-out;
 }
 
-.sidebar-option.active{
+/* Active sidebar option */
+.sidebar-option.active {
     background-color: #fff0ed;
     border-color: tomato;
 }
 
-@media(max-width:900px){
-    .sidebar-option p{
-        display: none;
+/* ✅ Responsive Sidebar for Smaller Screens */
+@media (max-width: 900px) {
+    .sidebar {
+        width: 90px; /* Sidebar collapses */
+        min-width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sidebar-options {
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .sidebar-option {
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .sidebar-option img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .sidebar-option p {
+        display: none; /* Hide text */
+    }
+}
+
+/* ✅ Full-Screen Mode for Mobile (Optional) */
+@media (max-width: 500px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        background: white;
+        border-top: 1px solid #a9a9a9;
+    }
+
+    .sidebar-options {
+        flex-direction: row;
+        gap: 10px;
+        padding: 0;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .sidebar-option {
+        width: auto;
+        border: none;
+        padding: 10px;
+        border-radius: 0;
     }
 }
