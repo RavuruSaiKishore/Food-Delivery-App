@@ -16,4 +16,4 @@ export const assets ={
     crop_profile,
 }
 
-export const url = 'https://food-delivery-app-backend-3ena.onrender.com'
+export const url = 'https://food-delivery-app-backend-4uzo.onrender.com'
