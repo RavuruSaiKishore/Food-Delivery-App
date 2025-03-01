@@ -24,7 +24,7 @@ const LoginPopup = ({ setShowLogin }) => {
   const onLogin = async (event) => {
     event.preventDefault(); // Prevent default form submission
   
-    let baseUrl = "https://food-delivery-app-backend-3ena.onrender.com";
+    let baseUrl = "https://food-delivery-app-backend-4uzo.onrender.com";
     let newUrl = `${baseUrl}${currState === "Login" ? "/api/user/login" : "/api/user/register"}`;
   
       const response = await axios.post(newUrl, data);
